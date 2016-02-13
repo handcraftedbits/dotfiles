@@ -2,6 +2,12 @@
 filetype off
 set encoding=utf-8
 
+if $SHELL =~ 'fish'
+  set shell=/bin/sh
+endif
+
+let mapleader=","
+
 " Vundle
 set rtp+=~/.vim/bundle/Vundle.vim
 
@@ -11,21 +17,23 @@ Plugin 'ervandew/supertab'
 Plugin 'fatih/vim-go'
 Plugin 'fatih/molokai'
 Plugin 'majutsushi/tagbar'
-" Until my PR is merged...
-"Plugin 'scrooloose/nerdtree'
-Plugin 'handcraftedbits/nerdtree'
+Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
-Plugin 'bling/vim-airline'
 Plugin 'tpope/vim-fugitive'
 Plugin 'kien/ctrlp.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
 
 call vundle#end()
 
 filetype plugin indent on
 
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+" NERDTree
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 autocmd vimenter * NERDTree
 autocmd vimenter * wincmd p
+
+nmap <leader>n :NERDTreeToggle
 
 " SuperTab
 set completeopt-=preview
@@ -35,14 +43,25 @@ let g:SuperTabDefaultCompletionType = "context"
 " Tagbar
 autocmd vimenter * TagbarToggle
 
-nmap <F8> :TagbarToggle<CR>
+nmap <leader>t :TagbarToggle<CR>
 
 " vim-go
+let g:go_highlight_build_constraints = 1
 let g:go_highlight_functions = 1
+let g:go_highlight_interfaces = 1
+let g:go_highlight_operators = 1
 let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
 
-au FileType go nmap <F3> <Plug>(go-def)
+au FileType go nmap <leader>gb <Plug>(go-build)
+au FileType go nmap <leader>gc <Plug>(go-coverage)
+au FileType go nmap <leader>gd <Plug>(go-def)
+au FileType go nmap <leader>gm <Plug>(go-implements)
+au FileType go nmap <leader>gi <Plug>(go-info)
+au FileType go nmap <leader>ge <Plug>(go-rename)
+au FileType go nmap <leader>go <Plug>(go-doc)
+au FileType go nmap <leader>gr <Plug>(go-run)
+au FileType go nmap <leader>gt <Plug>(go-test)
 
 " airline
 let g:airline_powerline_fonts = 1
@@ -66,6 +85,7 @@ autocmd FileType yaml set tabstop=2|set shiftwidth=2|set expandtab
 colorscheme molokai
 
 " General settings
+set backspace=indent,eol,start
 set colorcolumn=120
 set cursorline
 set hlsearch
@@ -80,15 +100,12 @@ set showmatch
 set t_Co=256
 set fillchars=vert:\│
 
-let mapleader=","
 nnoremap <leader><space> :nohlsearch<CR>
 
 if has("gui_running")
   if has("gui_macvim")
     set guifont=Source\ Code\ Pro\ Medium:h12
   else
-    set backspace=2
-    set backspace=indent,eol,start
     set guifont=Source_Code_Pro_Medium:h8:cANSI
   endif
 
