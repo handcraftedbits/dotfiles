@@ -13,14 +13,16 @@ set rtp+=~/.vim/bundle/Vundle.vim
 
 call vundle#begin()
 
+Plugin 'chrisbra/unicode.vim'
 Plugin 'ervandew/supertab'
 Plugin 'fatih/vim-go'
 Plugin 'fatih/molokai'
+Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-fugitive'
-Plugin 'kien/ctrlp.vim'
+Plugin 't-yuki/vim-go-coverlay'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 
@@ -54,14 +56,17 @@ let g:go_highlight_methods = 1
 let g:go_highlight_structs = 1
 
 au FileType go nmap <leader>gb <Plug>(go-build)
-au FileType go nmap <leader>gc <Plug>(go-coverage)
+au FileType go nmap <leader>gc <Plug>(go-coverlay)
+au FileType go nmap <leader>gC <Plug>(go-clearlay)
 au FileType go nmap <leader>gd <Plug>(go-def)
 au FileType go nmap <leader>gm <Plug>(go-implements)
 au FileType go nmap <leader>gi <Plug>(go-info)
+au FileType go nmap <leader>gl <Plug>(go-metalinter)
 au FileType go nmap <leader>ge <Plug>(go-rename)
 au FileType go nmap <leader>go <Plug>(go-doc)
 au FileType go nmap <leader>gr <Plug>(go-run)
 au FileType go nmap <leader>gt <Plug>(go-test)
+au FileType go nmap <leader>gv <Plug>(go-vet)
 
 " airline
 let g:airline_powerline_fonts = 1
