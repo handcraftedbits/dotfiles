@@ -17,6 +17,8 @@ Plugin 'chrisbra/unicode.vim'
 Plugin 'ervandew/supertab'
 Plugin 'fatih/vim-go'
 Plugin 'fatih/molokai'
+Plugin 'gabrielelana/vim-markdown'
+Plugin 'godlygeek/tabular'
 Plugin 'kien/ctrlp.vim'
 Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/nerdtree'
@@ -81,6 +83,8 @@ autocmd FileType html set tabstop=2|set shiftwidth=2|set expandtab
 autocmd FileType java set tabstop=5|set shiftwidth=5|set expandtab
 autocmd FileType javascript set tabstop=5|set shiftwidth=5|set expandtab
 autocmd FileType json set tabstop=2|set shiftwidth=2|set expandtab
+autocmd FileType markdown set tabstop=2|set shiftwidth=2|set expandtab
+autocmd FileType md set tabstop=2|set shiftwidth=2|set expandtab
 autocmd FileType sh set tabstop=5|set shiftwidth=5|set expandtab
 autocmd FileType vim set tabstop=2|set shiftwidth=2|set expandtab
 autocmd FileType xml set tabstop=2|set shiftwidth=2|set expandtab
