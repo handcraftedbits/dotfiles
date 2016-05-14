@@ -77,12 +77,14 @@ let g:airline_powerline_fonts = 1
 set autoindent
 syntax on
 
+autocmd FileType css set tabstop=5|set shiftwidth=5|set expandtab
 autocmd FileType dockerfile set tabstop=2|set shiftwidth=2|set expandtab
 autocmd FileType go set tabstop=4|set shiftwidth=4
 autocmd FileType html set tabstop=2|set shiftwidth=2|set expandtab
 autocmd FileType java set tabstop=5|set shiftwidth=5|set expandtab
 autocmd FileType javascript set tabstop=5|set shiftwidth=5|set expandtab
 autocmd FileType json set tabstop=2|set shiftwidth=2|set expandtab
+autocmd FileType less set tabstop=5|set shiftwidth=5|set expandtab
 autocmd FileType markdown set tabstop=2|set shiftwidth=2|set expandtab
 autocmd FileType md set tabstop=2|set shiftwidth=2|set expandtab
 autocmd FileType sh set tabstop=5|set shiftwidth=5|set expandtab
