@@ -34,10 +34,10 @@ filetype plugin indent on
 
 " NERDTree
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
-autocmd vimenter * NERDTree
+autocmd vimenter * :silent! NERDTree
 autocmd vimenter * wincmd p
 
-nmap <leader>n :NERDTreeToggle
+nmap <leader>n :silent! :NERDTreeToggle
 
 " SuperTab
 set completeopt-=preview
@@ -45,9 +45,9 @@ set completeopt-=preview
 let g:SuperTabDefaultCompletionType = "context"
 
 " Tagbar
-autocmd vimenter * TagbarToggle
+autocmd vimenter * :silent! TagbarToggle
 
-nmap <leader>t :TagbarToggle<CR>
+nmap <leader>t :silent! :TagbarToggle<CR>
 
 " vim-go
 let g:go_highlight_build_constraints = 1
@@ -93,7 +93,7 @@ autocmd FileType xml set tabstop=2|set shiftwidth=2|set expandtab
 autocmd FileType yaml set tabstop=2|set shiftwidth=2|set expandtab
 
 " Colors
-colorscheme molokai
+:silent! colorscheme molokai
 
 " General settings
 set backspace=indent,eol,start
