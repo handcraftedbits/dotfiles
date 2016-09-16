@@ -1,0 +1,9 @@
+Host *
+  IdentityFile ~/.ssh/dev.pem
+  ServerAliveInterval 60
+
+Host bitbucket.com
+  IdentityFile ~/.ssh/bitbucket.pem
+
+Host github.com
+  IdentityFile ~/.ssh/github.pem
