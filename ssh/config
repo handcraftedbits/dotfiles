@@ -1,3 +1,5 @@
+AddKeysToAgent yes
+
 Host *
   IdentityFile ~/.ssh/dev.pem
   ServerAliveInterval 60
