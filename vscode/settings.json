@@ -1,0 +1,17 @@
+// Place your settings in this file to overwrite the default settings
+{
+  "editor.autoClosingBrackets": false,
+  "editor.fontFamily": "'Source Code Pro'",
+  "editor.fontSize": 12,
+  "editor.minimap.enabled": false,
+  "editor.renderWhitespace": "all",
+  "editor.rulers": [
+    120
+  ],
+  "editor.tabSize": 5,
+  "files.eol": "\n",
+  "vim.hlsearch": true,
+  "window.zoomLevel": 0,
+  "workbench.colorTheme": "Monokai",
+  "workbench.iconTheme": "vscode-icons"
+}
