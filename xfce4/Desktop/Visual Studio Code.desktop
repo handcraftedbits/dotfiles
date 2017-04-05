@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Visual Studio Code
+Comment=Code Editing. Redefined.
+Exec=/usr/share/code/code --unity-launch %U
+Icon=code
+Path=
+Terminal=false
+StartupNotify=true
