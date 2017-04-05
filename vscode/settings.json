@@ -9,6 +9,17 @@
     120
   ],
   "editor.tabSize": 5,
+  "files.associations": {
+    "**/defaults/**/*": "ansible",
+    "**/tasks/**/*.yml" : "ansible",
+    "**/handler/*.yml" : "ansible",
+    "**/*_vars/**/*.yml" : "ansible",
+    "**/roles/**/*.yml" : "ansible",
+    "**/playbooks/**/*.yml" : "ansible",
+    "**/*ansible*/**/*.yml" : "ansible",
+    "**/vars/**/*.yml": "ansible",
+    "**/inventory/*/*": "ansible"
+  },
   "files.eol": "\n",
   "vim.hlsearch": true,
   "window.zoomLevel": 0,
