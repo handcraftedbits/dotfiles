@@ -5,4 +5,6 @@
 ;; You may delete these explanatory comments.
 (package-initialize)
 
+(setq vc-follow-symlinks t)
+
 (org-babel-load-file "~/.emacs.d/config.org")
