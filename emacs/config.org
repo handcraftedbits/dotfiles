@@ -1,0 +1,153 @@
+* Emacs configuration
+** Install required packages
+#+BEGIN_SRC emacs-lisp :tangle yes
+  (require 'package)
+
+  (setq package-selected-packages '(all-the-icons
+                                    all-the-icons-dired
+                                    ansible
+                                    ansible-doc
+                                    company
+                                    company-ansible
+                                    company-go
+                                    company-restclient
+                                    company-shell
+                                    company-web
+                                    docean
+                                    docker
+                                    dockerfile-mode
+                                    editorconfig
+                                    evil
+                                    evil-org
+                                    fish-mode
+                                    git-gutter
+                                    gitconfig-mode
+                                    gitignore-mode
+                                    go-mode
+                                    helm
+                                    js2-mode
+                                    json-mode
+                                    less-css-mode
+                                    magit
+                                    markdown-mode
+                                    monokai-theme
+                                    neotree
+                                    nginx-mode
+                                    npm-mode
+                                    org-bullets
+                                    projectile
+                                    rainbow-delimiters
+                                    rainbow-mode
+                                    spaceline
+                                    ssh-config-mode winum))
+
+  (add-to-list 'package-archives
+               '("melpa" . "https://melpa.org/packages/"))
+
+  (package-initialize)
+
+  (unless package-archive-contents
+    (package-refresh-contents))
+
+  (dolist (package package-selected-packages)
+    (unless (package-installed-p package)
+      (package-install package)))
+#+END_SRC
+*** Extra steps
+The package =all-the-icons= requires the fonts found [[https://github.com/domtronn/all-the-icons.el/tree/master/fonts][here]].
+** General
+#+BEGIN_SRC emacs-lisp :tangle yes
+  (evil-mode t)
+  (global-git-gutter-mode +1)
+  ;(helm-mode)
+#+END_SRC
+** Appearance
+#+BEGIN_SRC emacs-lisp :tangle yes
+  (require 'spaceline-config)
+
+  (setq inhibit-startup-screen t)
+  (setq powerline-default-separator 'wave)
+  (setq ring-bell-function 'ignore)
+  (setq spaceline-highlight-face-func 'spaceline-highlight-face-evil-state)
+  (setq spaceline-window-numbers-unicode t)
+  (setq winum-auto-setup-mode-line nil)
+
+  (set-default-font "Source Code Pro")
+
+  (global-hl-line-mode t)
+  (global-linum-mode t)
+  (scroll-bar-mode -1)
+  (tool-bar-mode -1)
+
+  (load-theme 'monokai t)
+
+  (spaceline-spacemacs-theme)
+  (winum-mode)
+#+END_SRC
+** File handling
+#+BEGIN_SRC emacs-lisp :tangle yes
+  (setq auto-save-default nil)
+  (setq create-lockfiles nil)
+  (setq make-backup-files nil)
+  (setq-default indent-tabs-mode nil)
+
+  (prefer-coding-system 'utf-8)
+
+  (add-hook 'find-file-hook (lambda ()
+                              (set-buffer-file-coding-system 'utf-8-unix)))
+#+END_SRC
+** Packages
+*** neotree
+#+BEGIN_SRC emacs-lisp :tangle yes
+  (setq neo-smart-open t)
+  (setq neo-theme (if (display-graphic-p) 'icons 'arrow))
+
+  (global-set-key [f8] 'neotree-toggle)
+
+  (add-hook 'dired-mode-hook 'all-the-icons-dired-mode)
+#+END_SRC
+** Modes
+*** html-mode
+#+BEGIN_SRC emacs-lisp :tangle yes
+  (add-hook 'html-mode-hook (lambda ()
+                              (setq sgml-basic-offset 2)
+
+                              (whitespace-mode)))
+#+END_SRC
+*** java-mode
+#+BEGIN_SRC emacs-lisp :tangle yes
+  (setq c-basic-offset 5)
+  (setq tab-width 5)
+#+END_SRC
+*** js2-mode
+#+BEGIN_SRC emacs-lisp :tangle yes
+  (setq js2-basic-offset 5)
+
+  (add-to-list 'auto-mode-alist '("\\.js\\'" . js2-mode))
+#+END_SRC
+*** org-mode
+#+BEGIN_SRC emacs-lisp :tangle yes
+  (require 'org-bullets)
+
+  (setq org-agenda-files '("~/Dropbox/emacs/org"))
+  (setq org-agenda-window-setup 'current-window)
+  (setq org-ellipsis "\u2935")
+  (setq org-log-done 'time)
+  (setq org-src-fontify-natively t)
+  (setq org-src-window-setup 'current-window)
+  (setq org-startup-folded t)
+  (setq org-startup-indented t)
+
+  (add-hook 'org-mode-hook (lambda () (org-bullets-mode t)))
+
+  (global-set-key "\C-ca" 'org-agenda)
+  (global-set-key "\C-cc" 'org-capture)
+#+END_SRC
+*** prog-mode
+#+BEGIN_SRC emacs-lisp :tangle yes
+  (add-hook 'prog-mode-hook (lambda ()
+                              (company-mode)
+                              (rainbow-delimiters-mode t)
+                              (rainbow-mode t)
+                              (whitespace-mode)))
+#+END_SRC

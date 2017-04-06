@@ -5,6 +5,7 @@ bin/
 
 .classpath
 .project
+config.el
 
 *.iml
 .idea/
