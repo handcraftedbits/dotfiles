@@ -22,7 +22,8 @@
   },
   "files.eol": "\n",
   "vim.hlsearch": true,
-  "window.zoomLevel": 0,
   "workbench.colorTheme": "Monokai",
-  "workbench.iconTheme": "vscode-icons"
+  "workbench.iconTheme": "vscode-icons",
+  "vim.disableAnnoyingNeovimMessage": true,
+  "vsicons.dontShowNewVersionMessage": true
 }
