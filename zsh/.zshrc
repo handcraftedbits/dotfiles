@@ -1,7 +1,7 @@
 export TERM=xterm-256color
 [ -n "$TMUX" ] && export TERM=screen-256color
 
-export ZSH=/home/curtiss/.oh-my-zsh
+export ZSH=~/.oh-my-zsh
 
 ZSH_THEME="handcraftedbits"
 
@@ -11,4 +11,5 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+alias ccat='~/.local/bin/pygmentize -O style=monokai-hcb -f console256 -g'
 alias ls='ls --color=tty -F'
