@@ -5,7 +5,7 @@ export ZSH=~/.oh-my-zsh
 
 ZSH_THEME="handcraftedbits"
 
-plugins=(git shrink-path ssh-agent zsh-autosuggestions zsh-256color)
+plugins=(git gpg-agent pass shrink-path zsh-autosuggestions zsh-256color)
 
 source $ZSH/oh-my-zsh.sh
 
