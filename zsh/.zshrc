@@ -5,7 +5,7 @@ export ZSH=~/.oh-my-zsh
 
 ZSH_THEME="handcraftedbits"
 
-plugins=(git gpg-agent pass shrink-path zsh-autosuggestions zsh-256color)
+plugins=(git pass shrink-path zsh-autosuggestions zsh-256color)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -13,3 +13,4 @@ source $ZSH/oh-my-zsh.sh
 
 alias ccat='~/.local/bin/pygmentize -O style=monokai-hcb -f console256 -g'
 alias ls='ls --color=tty -F'
+alias tmux='tmux -u'
