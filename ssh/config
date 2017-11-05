@@ -1,5 +1,2 @@
 Host *
   ServerAliveInterval 60
-
-Host bitbucket.org
-  IdentityFile ~/.ssh/bitbucket.pem

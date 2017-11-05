@@ -1,0 +1,7 @@
+Host *
+  ServerAliveInterval 60
+
+Host dev
+  HostName %h.howard.estate
+  RemoteForward /run/user/1000/gnupg/S.gpg-agent /Users/curtiss/.gnupg/S.gpg-agent.remote
+  RemoteForward /run/user/1000/gnupg/S.gpg-agent.ssh /Users/curtiss/.gnupg/S.gpg-agent.ssh
