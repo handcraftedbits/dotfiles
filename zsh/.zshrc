@@ -3,6 +3,7 @@ export LANGUAGE="en_US.utf8"
 export LC_ALL="en_US.utf8"
 export TERM=xterm-256color
 export ZSH=~/.oh-my-zsh
+export ZSH_TMUX_AUTOSTART=true
 
 [ -n "$TMUX" ] && export TERM=screen-256color
 
