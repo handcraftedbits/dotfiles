@@ -9,7 +9,7 @@ export ZSH_TMUX_AUTOSTART=true
 
 ZSH_THEME="handcraftedbits"
 
-plugins=(git pass shrink-path tmux zsh-autosuggestions zsh-256color)
+plugins=(git pass shrink-path zsh-autosuggestions zsh-256color)
 
 source $ZSH/oh-my-zsh.sh
 
