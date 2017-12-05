@@ -21,9 +21,9 @@
     "**/inventory/*/*": "ansible"
   },
   "files.eol": "\n",
+  "git.autofetch": false,
   "vim.hlsearch": true,
   "workbench.colorTheme": "Monokai",
   "workbench.iconTheme": "vscode-icons",
-  "vim.disableAnnoyingNeovimMessage": true,
   "vsicons.dontShowNewVersionMessage": true
 }
