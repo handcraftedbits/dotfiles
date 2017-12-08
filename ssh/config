@@ -1,2 +1,5 @@
 Host *
   ServerAliveInterval 60
+
+Host git-codecommit.*.amazonaws.com
+  User APKAIDMZO6OLIIPRDF2A
