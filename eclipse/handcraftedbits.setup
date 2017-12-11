@@ -40,7 +40,21 @@
     <requirement
         name="code.satyagraha.gfm.viewer.feature.feature.group"/>
     <requirement
-        name="com.atlassian.connector.eclipse.feature.group"/>
+        name="com.amazonaws.eclipse.cloudformation.feature.feature.group"/>
+    <requirement
+        name="com.amazonaws.eclipse.simpleworkflow.feature.feature.group"/>
+    <requirement
+        name="com.amazonaws.eclipse.core.feature.feature.group"/>
+    <requirement
+        name="com.amazonaws.eclipse.codedeploy.feature.feature.group"/>
+    <requirement
+        name="com.amazonaws.eclipse.elasticbeanstalk.feature.feature.group"/>
+    <requirement
+        name="com.amazonaws.eclipse.lambda.feature.feature.group"/>
+    <requirement
+        name="com.amazonaws.eclipse.opsworks.feature.feature.group"/>
+    <requirement
+        name="com.amazonaws.eclipse.codecommit.feature.feature.group"/>
     <requirement
         name="com.basistech.m2e.code.quality.checkstyle.feature.feature.group"/>
     <requirement
@@ -50,11 +64,7 @@
     <requirement
         name="com.ianbrandt.tools.m2e.mdp.feature.feature.group"/>
     <requirement
-        name="com.mountainminds.eclemma.feature.feature.group"/>
-    <requirement
         name="edu.umd.cs.findbugs.plugin.eclipse.feature.group"/>
-    <requirement
-        name="goclipse_feature.feature.group"/>
     <requirement
         name="net.sf.eclipsecs.feature.group"/>
     <requirement
@@ -80,8 +90,6 @@
     <requirement
         name="org.testng.eclipse.feature.group"/>
     <repository
-        url="http://update.atlassian.com/atlassian-eclipse-plugin/rest/e3.7"/>
-    <repository
         url="http://download.jboss.org/jbosstools/updates/m2e-wro4j/"/>
     <repository
         url="http://ianbrandt.github.io/m2e-maven-dependency-plugin/"/>
@@ -92,15 +100,13 @@
     <repository
         url="http://download.eclipse.org/egit/github/updates"/>
     <repository
-        url="https://repo1.maven.org/maven2/.m2e/connectors/m2eclipse-egit/0.14.0/N/LATEST/"/>
+        url="https://repo1.maven.org/maven2/.m2e/connectors/m2eclipse-egit/0.15.0/N/LATEST/"/>
     <repository
         url="http://eclipse-cs.sourceforge.net/update/"/>
     <repository
         url="http://findbugs.cs.umd.edu/eclipse"/>
     <repository
         url="http://download.eclipse.org/linuxtools/updates-docker-nightly/"/>
-    <repository
-        url="http://goclipse.github.io/releases/"/>
     <repository
         url="http://vrapper.sourceforge.net/update-site/stable/"/>
     <repository
@@ -113,6 +119,8 @@
         url="http://beust.com/eclipse"/>
     <repository
         url="http://basepom.github.io/basepom-m2e/update-site/latest/"/>
+    <repository
+        url="https://aws.amazon.com/eclipse/site.xml"/>
     <description>Install the tools needed in the IDE to work with the source code for ${scope.project.label}</description>
   </setupTask>
   <setupTask
