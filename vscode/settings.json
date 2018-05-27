@@ -25,6 +25,5 @@
   "vim.hlsearch": true,
   "workbench.colorTheme": "Monokai",
   "workbench.iconTheme": "vscode-icons",
-  "vsicons.dontShowNewVersionMessage": true,
-  "terraform.formatOnSave": true
+  "vsicons.dontShowNewVersionMessage": true
 }
