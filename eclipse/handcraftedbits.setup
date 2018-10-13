@@ -33,38 +33,22 @@
   <setupTask
       xsi:type="setup:VariableTask"
       name="eclipse.target.platform"
-      defaultValue="Mars"
+      defaultValue="2018-09"
       storageURI="scope://Workspace"/>
   <setupTask
       xsi:type="setup.p2:P2Task">
     <requirement
-        name="code.satyagraha.gfm.viewer.feature.feature.group"/>
-    <requirement
-        name="com.amazonaws.eclipse.cloudformation.feature.feature.group"/>
-    <requirement
-        name="com.amazonaws.eclipse.simpleworkflow.feature.feature.group"/>
-    <requirement
-        name="com.amazonaws.eclipse.core.feature.feature.group"/>
-    <requirement
-        name="com.amazonaws.eclipse.codedeploy.feature.feature.group"/>
-    <requirement
-        name="com.amazonaws.eclipse.elasticbeanstalk.feature.feature.group"/>
-    <requirement
-        name="com.amazonaws.eclipse.lambda.feature.feature.group"/>
-    <requirement
-        name="com.amazonaws.eclipse.opsworks.feature.feature.group"/>
-    <requirement
-        name="com.amazonaws.eclipse.codecommit.feature.feature.group"/>
-    <requirement
         name="com.basistech.m2e.code.quality.checkstyle.feature.feature.group"/>
     <requirement
-        name="com.basistech.m2e.code.quality.findbugs.feature.feature.group"/>
+        name="com.basistech.m2e.code.quality.spotbugs.feature.feature.group"/>
     <requirement
         name="com.github.sevntu.checkstyle.checks.feature.feature.group"/>
     <requirement
+        name="com.github.spotbugs.plugin.eclipse.feature.group"/>
+    <requirement
         name="com.ianbrandt.tools.m2e.mdp.feature.feature.group"/>
     <requirement
-        name="edu.umd.cs.findbugs.plugin.eclipse.feature.group"/>
+        name="code.satyagraha.gfm.viewer.feature.feature.group"/>
     <requirement
         name="net.sf.eclipsecs.feature.group"/>
     <requirement
@@ -73,6 +57,8 @@
         name="net.sourceforge.vrapper.eclipse.jdt.feature.feature.group"/>
     <requirement
         name="org.basepom.m2e.mycila_license.feature.feature.group"/>
+    <requirement
+        name="org.codehaus.groovy.eclipse.feature.feature.group"/>
     <requirement
         name="org.eclipse.oomph.preferences.feature.group"/>
     <requirement
@@ -94,25 +80,23 @@
     <repository
         url="http://ianbrandt.github.io/m2e-maven-dependency-plugin/"/>
     <repository
-        url="http://m2e-code-quality.github.io/m2e-code-quality/site/"/>
+        url="http://m2e-code-quality.github.io/m2e-code-quality-p2-site/"/>
     <repository
         url="https://repo1.maven.org/maven2/.m2e/connectors/m2eclipse-buildhelper/0.15.0/N/0.15.0.201405280027/"/>
     <repository
-        url="http://download.eclipse.org/egit/github/updates"/>
+        url="${eclipse_mirror}/egit/github/updates"/>
     <repository
-        url="https://repo1.maven.org/maven2/.m2e/connectors/m2eclipse-egit/0.15.0/N/LATEST/"/>
+        url="https://repo1.maven.org/maven2/.m2e/connectors/m2eclipse-egit/0.15.1/N/LATEST/"/>
     <repository
         url="http://eclipse-cs.sourceforge.net/update/"/>
     <repository
-        url="http://findbugs.cs.umd.edu/eclipse"/>
-    <repository
-        url="http://download.eclipse.org/linuxtools/updates-docker-nightly/"/>
+        url="${eclipse_mirror}/linuxtools/update-docker-4.0.2/"/>
     <repository
         url="http://vrapper.sourceforge.net/update-site/stable/"/>
     <repository
         url="https://raw.github.com/satyagraha/gfm_viewer/master/p2-composite/"/>
     <repository
-        url="http://download.eclipse.org/modeling/emf/cdo/updates/integration"/>
+        url="${eclipse_mirror}/eclipse/updates/4.9/"/>
     <repository
         url="http://update.eclemma.org/"/>
     <repository
@@ -120,12 +104,19 @@
     <repository
         url="http://basepom.github.io/basepom-m2e/update-site/latest/"/>
     <repository
-        url="https://aws.amazon.com/eclipse/site.xml"/>
+        url="https://spotbugs.github.io/eclipse/"/>
+    <repository
+        url="http://dist.springsource.org/snapshot/GRECLIPSE/e4.9"/>
     <description>Install the tools needed in the IDE to work with the source code for ${scope.project.label}</description>
   </setupTask>
   <setupTask
       xsi:type="setup:CompoundTask"
-      name="Variables"/>
+      name="Variables">
+    <setupTask
+        xsi:type="setup:VariableTask"
+        name="eclipse_mirror"
+        value="http://mirrors.ibiblio.org/eclipse"/>
+  </setupTask>
   <setupTask
       xsi:type="setup:CompoundTask"
       name="Preferences">
