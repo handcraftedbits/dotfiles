@@ -14,7 +14,7 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-alias ccat='~/.local/bin/pygmentize -O style=monokai-hcb -f console256 -g'
+alias ccat='pygmentize -O style=monokai-hcb -f console256 -g'
 alias ls='ls --color=tty -F'
 
 if [ -f $HOME/.zshrc-extra ]
