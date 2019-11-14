@@ -1,29 +1,66 @@
-// Place your settings in this file to overwrite the default settings
 {
-  "editor.autoClosingBrackets": false,
-  "editor.fontFamily": "'Source Code Pro'",
-  "editor.fontSize": 12,
-  "editor.minimap.enabled": false,
-  "editor.renderWhitespace": "all",
-  "editor.rulers": [
-    120
-  ],
-  "editor.tabSize": 5,
-  "files.associations": {
-    "**/defaults/**/*": "ansible",
-    "**/tasks/**/*.yml" : "ansible",
-    "**/handler/*.yml" : "ansible",
-    "**/*_vars/**/*.yml" : "ansible",
-    "**/roles/**/*.yml" : "ansible",
-    "**/playbooks/**/*.yml" : "ansible",
-    "**/*ansible*/**/*.yml" : "ansible",
-    "**/vars/**/*.yml": "ansible",
-    "**/inventory/*/*": "ansible"
-  },
-  "files.eol": "\n",
-  "git.autofetch": false,
-  "vim.hlsearch": true,
-  "workbench.colorTheme": "Monokai",
-  "workbench.iconTheme": "vscode-icons",
-  "vsicons.dontShowNewVersionMessage": true
+    "debug.console.fontSize": 12,
+    "editor.fontFamily": "'Source Code Pro', Consolas, 'Courier New', monospace",
+    "editor.fontSize": 12,
+    "editor.minimap.enabled": false,
+    "editor.renderWhitespace": "all",
+    "editor.rulers": [
+        120
+    ],
+    "editor.suggestSelection": "first",
+    "files.autoSave": "off",
+    "files.associations": {
+        "**/group_vars/**/*.yaml": "ansible",
+        "**/roles/**/*.yaml": "ansible"
+    },
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.factorypath": true
+    },
+    "go.languageServerExperimentalFeatures": {
+        "format": true,
+        "autoComplete": true,
+        "rename": true,
+        "goToDefinition": true,
+        "hover": true,
+        "signatureHelp": true,
+        "goToTypeDefinition": true,
+        "goToImplementation": true,
+        "documentSymbols": true,
+        "workspaceSymbols": true,
+        "findReferences": true,
+        "diagnostics": true,
+        "documentLink": true,
+        "highlight": true
+    },
+    "go.useLanguageServer": true,
+    "gopls": {
+        "completeUnimported": true,
+        "deepCompletion": true,
+        "usePlaceholders": true,
+        "watchFileChanges": true,
+    },
+    "java.configuration.updateBuildConfiguration": "automatic",
+    "material-icon-theme.folders.color": "#F2C84D",
+    "material-icon-theme.folders.theme": "specific",
+    "terminal.integrated.fontFamily": "'Source Code Pro', Consolas, 'Courier New', monospace",
+    "terminal.integrated.fontSize": 12,
+    "vim.hlsearch": true,
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "workbench.editor.enablePreview": false,
+    "workbench.colorTheme": "Monokai",
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.startupEditor": "newUntitledFile",
+    "workbench.tree.indent": 12,
+    "workbench.tree.renderIndentGuides": "always",
+
+    "[go]": {
+        "editor.snippetSuggestions": "none",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.organizeImports": true
+        }
+    }
 }
