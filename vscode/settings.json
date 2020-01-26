@@ -19,6 +19,7 @@
         "**/.settings": true,
         "**/.factorypath": true
     },
+    "go.buildOnSave": "package",
     "go.languageServerExperimentalFeatures": {
         "format": true,
         "autoComplete": true,
@@ -35,6 +36,7 @@
         "documentLink": true,
         "highlight": true
     },
+    "go.lintOnSave": "package",
     "go.useLanguageServer": true,
     "gopls": {
         "completeUnimported": true,
@@ -48,6 +50,7 @@
     "terminal.integrated.fontFamily": "'Source Code Pro', Consolas, 'Courier New', monospace",
     "terminal.integrated.fontSize": 12,
     "vim.hlsearch": true,
+    "vsicons.dontShowNewVersionMessage": true,
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
     "workbench.editor.enablePreview": false,
     "workbench.colorTheme": "Monokai",
