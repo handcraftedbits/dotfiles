@@ -42,11 +42,9 @@
         "completeUnimported": true,
         "deepCompletion": true,
         "usePlaceholders": true,
-        "watchFileChanges": true,
+        "watchFileChanges": true
     },
     "java.configuration.updateBuildConfiguration": "automatic",
-    "material-icon-theme.folders.color": "#F2C84D",
-    "material-icon-theme.folders.theme": "specific",
     "terminal.integrated.fontFamily": "'Source Code Pro', Consolas, 'Courier New', monospace",
     "terminal.integrated.fontSize": 12,
     "vim.hlsearch": true,
