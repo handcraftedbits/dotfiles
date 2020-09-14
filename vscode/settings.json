@@ -44,9 +44,18 @@
         "usePlaceholders": true,
         "watchFileChanges": true
     },
+    "java.completion.importOrder": [
+        "java",
+        "javax",
+        "com",
+        "org"
+    ],
+    "java.configuration.maven.userSettings": "~/.m2/settings.xml",
     "java.configuration.updateBuildConfiguration": "automatic",
+    "java.format.settings.url": "https://raw.githubusercontent.com/handcraftedbits/dotfiles/master/eclipse/handcraftedbits.xml",
     "terminal.integrated.fontFamily": "'Source Code Pro', Consolas, 'Courier New', monospace",
     "terminal.integrated.fontSize": 12,
+    "vim.debug.silent": true,
     "vim.hlsearch": true,
     "vsicons.dontShowNewVersionMessage": true,
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
@@ -63,6 +72,5 @@
         "editor.codeActionsOnSave": {
             "source.organizeImports": true
         }
-    },
-    "vim.debug.silent": true
+    }
 }
