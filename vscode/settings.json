@@ -53,6 +53,7 @@
     ],
     "java.configuration.maven.userSettings": "~/.m2/settings.xml",
     "java.configuration.updateBuildConfiguration": "automatic",
+    "java.format.comments.enabled": false,
     "java.format.settings.url": "https://raw.githubusercontent.com/handcraftedbits/dotfiles/master/eclipse/handcraftedbits.xml",
     "java.project.importOnFirstTimeStartup": "automatic",
     "java.saveActions.organizeImports": true,
