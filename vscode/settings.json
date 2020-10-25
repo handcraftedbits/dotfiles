@@ -2,6 +2,7 @@
     "debug.console.fontSize": 12,
     "editor.fontFamily": "'Source Code Pro', Consolas, 'Courier New', monospace",
     "editor.fontSize": 12,
+    "editor.formatOnSave": false,
     "editor.minimap.enabled": false,
     "editor.renderWhitespace": "all",
     "editor.rulers": [
@@ -44,9 +45,22 @@
         "usePlaceholders": true,
         "watchFileChanges": true
     },
+    "java.completion.importOrder": [
+        "java",
+        "javax",
+        "org",
+        "com"
+    ],
+    "java.configuration.maven.userSettings": "~/.m2/settings.xml",
     "java.configuration.updateBuildConfiguration": "automatic",
+    "java.format.comments.enabled": false,
+    "java.format.settings.url": "https://raw.githubusercontent.com/handcraftedbits/dotfiles/master/eclipse/handcraftedbits.xml",
+    "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx1G -Xms100m -javaagent:\"/home/curtiss/.local/share/code-server/extensions/gabrielbb.vscode-lombok-1.0.1/server/lombok.jar\"",
+    "java.project.importOnFirstTimeStartup": "automatic",
+    "java.saveActions.organizeImports": true,
     "terminal.integrated.fontFamily": "'Source Code Pro', Consolas, 'Courier New', monospace",
     "terminal.integrated.fontSize": 12,
+    "vim.debug.silent": true,
     "vim.hlsearch": true,
     "vsicons.dontShowNewVersionMessage": true,
     "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
@@ -56,7 +70,6 @@
     "workbench.startupEditor": "newUntitledFile",
     "workbench.tree.indent": 12,
     "workbench.tree.renderIndentGuides": "always",
-
     "[go]": {
         "editor.snippetSuggestions": "none",
         "editor.formatOnSave": true,
@@ -64,5 +77,8 @@
             "source.organizeImports": true
         }
     },
-    "vim.debug.silent": true
+    "[java]": {
+        "editor.formatOnSave": true
+    }
 }
+
