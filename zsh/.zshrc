@@ -21,3 +21,5 @@ if [ -f $HOME/.zshrc-extra ]
 then
      source $HOME/.zshrc-extra
 fi
+
+[[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
